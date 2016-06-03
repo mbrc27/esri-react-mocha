@@ -1,0 +1,28 @@
+{
+  "name": "esri-react-mocha",
+  "description": "Boilerplate to create mocha and enzyme tests within React-Esri(dojo) based application. Supports AMD.",
+  "main": "index.js",
+  "authors": [
+    "Marcin Brach <marcin.brc@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "React",
+    "esri",
+    "dojo",
+    "amd",
+    "mocha",
+    "enzyme"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "arcgis-js-api": "4.0.0"
+  }
+}

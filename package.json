@@ -1,0 +1,42 @@
+{
+  "name": "esri-react-mocha",
+  "version": "1.0.0",
+  "description": "Boilerplate to create mocha and enzyme tests within React-Esri(dojo) based application. Supports AMD.",
+  "main": "index.js",
+  "scripts": {
+    "compile": "babel src -d dist",
+    "test": "mocha test/setup.js test/*.spec.js"
+  },
+  "keywords": [
+    "React",
+    "esri",
+    "dojo",
+    "amd",
+    "mocha",
+    "enzyme"
+  ],
+  "author": "Marcin Brach <marcin.brc@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-plugin-transform-es2015-modules-amd": "^6.8.0",
+    "babel-preset-airbnb": "^2.0.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.9.0",
+    "chai": "^3.5.0",
+    "enzyme": "^2.3.0",
+    "jsdom": "^9.2.1",
+    "mocha": "^2.5.3",
+    "phantomjs": "^2.1.7",
+    "react-addons-test-utils": "^15.1.0",
+    "requirejs": "^2.2.0"
+  },
+  "dependencies": {
+    "dojo": "^1.11.1",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
