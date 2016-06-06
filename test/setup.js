@@ -7,7 +7,7 @@ var path = require('path');
 //There is a problem when Enzyme is loading lodash
 // and babel-register is loading regenerate after loading dojo
 //Temporaly solution is to load these modules as global before dojo
-// _ = require('lodash');
+_ = require('lodash');
 // regenerate = require('regenerate');
 
 //Definition of jsdom document
