@@ -7,8 +7,8 @@ var path = require('path');
 //There is a problem when Enzyme is loading lodash
 // and babel-register is loading regenerate after loading dojo
 //Temporaly solution is to load these modules as global before dojo
-_ = require('lodash');
-regenerate = require('regenerate');
+// _ = require('lodash');
+// regenerate = require('regenerate');
 
 //Definition of jsdom document
 var exposedProperties = ['window', 'navigator', 'document'];
@@ -28,9 +28,13 @@ navigator = {
 };
 
 global.dojoConfig = {
-    //We need to force gfx renderer to that map can be loaded within jsdom
+    hasCache: {
+        'host-node': true
+    },
+    //We need to force gfx renderer so that map can be loaded within jsdom
     forceGfxRenderer: 'svg',
-    async: true,
+    //async: true,
+    //isDebug: true,
     packages: [
         {
             name: 'react',
@@ -73,12 +77,14 @@ global.dojoConfig = {
         },
         {
             name: 'app',
-            location: path.resolve('dist'),
-            main: 'appRoot'
+            location: path.resolve('dist')
         }
     ]
 };
 
 require(path.resolve('bower_components/dojo/dojo.js'));
 
-//require('babel-register')();
+// require('babel-register')({
+//     only: /test/
+//     //extensions: ['.jsx']
+// });

@@ -11,9 +11,7 @@
             ],
             "sourceMaps": "inline"
         },
-        "testing": {
-            "sourceMaps": "inline"
-        }
+        "testing": { }
     },
     "presets": [
         "airbnb",
@@ -23,6 +21,7 @@
     ],
     "ignore": [
         "dist",
+        "bower_components",
         "node_modules"
     ]
 }

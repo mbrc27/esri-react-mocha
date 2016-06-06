@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "compile": "babel src -d dist",
-    "test": "mocha test/setup.js test/*.spec.js"
+    "test:compile": "babel test --only test/*.spec.js -d test/dist",
+    "test": "npm run test:compile & mocha test/setup.js test/dist/*.spec.js"
   },
   "keywords": [
     "React",
