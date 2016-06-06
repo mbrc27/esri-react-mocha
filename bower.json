@@ -23,6 +23,7 @@
     "tests"
   ],
   "dependencies": {
-    "arcgis-js-api": "4.0.0"
+    "arcgis-js-api": "4.0.0",
+    "react": "^15.1.0"
   }
 }

@@ -1,13 +1,18 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from 'chai';
-import requirejs from 'requirejs';
-
-const Map = requirejs('app/Map').default;
+var React = require('react');
+var shallow = require('enzyme').shallow;
+var expect = require('chai').expect;
+// import React from 'react';
+// import {shallow} from 'enzyme';
+// import {expect} from 'chai';
 
 describe('<Map/>', () => {
-    it('Should have esri map', () => {
-        const wrapper = shallow(<Map/>);
-        expect(true).to.be.equal(true);
+    global.require(['app/Map'], function (Map) {
+        it('Should have esri map', () => {
+            //const wrapper = shallow(<Map.default/>);
+            var wrapper = shallow(
+                React.createElement(Map.default)
+            );
+            expect(true).to.be.equal(true);
+        });
     });
 });
